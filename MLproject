@@ -1,0 +1,46 @@
+name: gaflow-yolo-experiments
+
+conda_env: conda.yaml
+
+entry_points:
+  experiment_baseline:
+    command: "python mlflow_experiments/exp_baseline.py"
+    parameters:
+      epochs:
+        type: int
+        default: 5
+      batch_size:
+        type: int
+        default: 16
+      model_size:
+        type: str
+        default: "yolov8n"
+  
+  experiment_hyperparams:
+    command: "python mlflow_experiments/exp_hyperparams.py"
+    parameters:
+      epochs:
+        type: int
+        default: 10
+      batch_size:
+        type: int
+        default: 32
+      learning_rate:
+        type: float
+        default: 0.01
+      model_size:
+        type: str
+        default: "yolov8s"
+  
+  experiment_model_size:
+    command: "python mlflow_experiments/exp_model_size.py"
+    parameters:
+      epochs:
+        type: int
+        default: 5
+      batch_size:
+        type: int
+        default: 16
+      model_size:
+        type: str
+        default: "yolov8m"

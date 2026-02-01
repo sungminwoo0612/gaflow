@@ -1,0 +1,100 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# MLflow
+mlflow.db
+mlflow.db-journal
+mlruns/
+mlflow_experiments/mlruns/
+
+# Model weights (large binaries)
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# YOLO pretrained and trained models
+yolo*.pt
+
+# Conda
+condaenv.*.requirements.txt
+.conda/
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# IDE & editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Type checking & lint
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+
+# Logs & temp
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# Archives (optional: remove if you want to track zips)
+*.zip
+
+# Dataset caches / downloaded data
+datasets/
+ultralytics/
+
+
+mlflow.db
