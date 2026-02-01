@@ -1,0 +1,4 @@
+# MLflow migration creates triggers on secrets table; MySQL with binary
+# logging requires this when the DB user does not have SUPER privilege.
+[mysqld]
+log_bin_trust_function_creators = 1
