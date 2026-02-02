@@ -1,0 +1,20 @@
+name: lab-exp-vehicle-8class
+
+conda_env: ../../conda.yaml
+
+entry_points:
+  main:
+    command: "python train.py"
+    parameters:
+      data_path:
+        type: str
+        default: "datasets/sakshamjn/vehicle-detection-8-classes-object-detection"
+      epochs:
+        type: int
+        default: 5
+      batch_size:
+        type: int
+        default: 16
+      model_size:
+        type: str
+        default: "yolov8n"

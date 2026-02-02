@@ -1,0 +1,29 @@
+# BDD100k 실험 설정
+dataset:
+  name: solesensei_bdd100k
+  path: datasets/solesensei/solesensei_bdd100k
+  
+training:
+  model_sizes:
+    - yolov8n
+    - yolov8s
+    - yolov8m
+  
+  epochs: 100
+  batch_size: 16
+  imgsz: 640
+  
+  # 추가 YOLO 파라미터
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  
+mlflow:
+  experiment_name: lab-bdd100k
+  tracking_uri: http://localhost:5000  # MLflow 서버 주소
+  
+  # SeaweedFS 아티팩트 저장소
+  artifact_location: s3://mlflow-artifacts/bdd100k
+  s3_endpoint_url: http://seaweedfs:8333

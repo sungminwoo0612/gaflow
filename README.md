@@ -1,5 +1,35 @@
 # GAFlow
 
+## 환경 셋업 (Conda + 의존성)
+
+Conda 환경 생성부터 의존성 일괄 설치까지 한 번에 수행합니다.  
+**사전 요구:** [Miniconda](https://docs.conda.io/en/latest/miniconda.html) 또는 Anaconda 설치 후 `conda`가 PATH에 있어야 합니다.
+
+```powershell
+# Windows (PowerShell) - 프로젝트 루트에서
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\scripts\setup_env.ps1
+```
+
+```bash
+# Linux / macOS (Bash)
+bash scripts/setup_env.sh
+```
+
+**옵션**
+
+| 옵션 | 설명 |
+|------|------|
+| `--dry-run` | 실제 실행 없이 수행할 명령만 출력 |
+| `--verbose` | 상세 로그 출력 |
+| `--recreate` | 기존 환경 삭제 후 새로 생성 |
+
+예: `.\scripts\setup_env.ps1 -Verbose -Recreate` / `bash scripts/setup_env.sh --verbose --recreate`
+
+셋업 후 활성화: `conda activate gaflow`
+
+---
+
 ## 데이터셋
 1. 사람 + 안전조끼(산업안전/CCTV 근접) 
   YOLO HighVis and Person Detection Dataset:
@@ -18,9 +48,9 @@
   - YOLO 학습용으로 바로 쓰기 좋음
   - 일부만 받아도 수 GB 수준으로 컷 가능
 
-```ps1
+```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\datasets\download_datasets.ps1
+.\scripts\download_datasets.ps1
 ```
 
 ## MLflow 실험 관리

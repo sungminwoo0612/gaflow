@@ -1,0 +1,20 @@
+name: lab-exp-bdd100k
+
+conda_env: ../../conda.yaml
+
+entry_points:
+  main:
+    command: "python train.py"
+    parameters:
+      data_path:
+        type: str
+        default: "datasets/solesensei/solesensei_bdd100k"
+      epochs:
+        type: int
+        default: 5
+      batch_size:
+        type: int
+        default: 16
+      model_size:
+        type: str
+        default: "yolov8n"
