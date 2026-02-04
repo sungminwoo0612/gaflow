@@ -27,7 +27,7 @@ def _resolve_data_yaml(data_path: str, base_dir: Path) -> Path:
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 mlflow.set_experiment("lab-vehicle-8class")
 
-data_path = os.getenv("data_path", "datasets/sakshamjn/vehicle-detection-8-classes-object-detection")
+data_path = os.getenv("data_path", "datasets/vehicle-detection-8-classes-object-detection")
 epochs = int(os.getenv("epochs", "5"))
 batch_size = int(os.getenv("batch_size", "16"))
 model_size = os.getenv("model_size", "yolov8n")

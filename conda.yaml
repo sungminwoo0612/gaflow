@@ -18,3 +18,5 @@ dependencies:
     - motmetrics>=1.4.0
     - pynvml
     - psutil
+    - fiftyone>=0.25.0
+    - yt-dlp>=2024.1.0

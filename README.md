@@ -102,6 +102,14 @@ bash mlflow_experiments/run_experiments.sh
 # MLflow UI 실행
 mlflow ui
 
+# Windows에서 WinError 10022 (sock.listen) 발생 시: workers를 1로 제한
+mlflow server --host 127.0.0.1 --port 5000 --workers 1
+# 또는 스크립트 사용 (프로젝트 루트의 mlruns 사용): .\scripts\mlflow_ui_win.ps1
+
+# 실험이 안 보이면: 서버를 프로젝트 루트(c:\workspace\gaflow)에서 실행했는지 확인.
+# experiments/yolo11n_bytetrack.py 는 프로젝트 루트의 mlruns/ 에 로깅하며,
+# UI에서는 Experiments 목록에서 "yolo-bytetrack" 실험을 선택해 Run을 확인할 수 있음.
+
 # 브라우저에서 확인
 # http://localhost:5000
 ```

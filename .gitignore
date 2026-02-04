@@ -96,5 +96,8 @@ temp/
 datasets/
 ultralytics/
 
+# Experiments output (generated videos)
+experiments/*.mp4
+
 
 mlflow.db
